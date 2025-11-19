@@ -2,7 +2,9 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com data:;">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primafood - Produsen Keripik Sayur dan Buah Rilldelish</title>
     
@@ -12,8 +14,6 @@
     <link rel="icon" href="favicon.png" sizes="32x32">
     <link rel="icon" href="favicon-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <meta property="og:title" content="Primafood - Produsen Keripik Sayur dan Buah Rilldelish">
     <meta property="og:description" content="Cek Price List Kemitraan! Keripik sehat Vacuum Frying, 0% MSG. Supplier Grosir/Reseller Resmi.">
@@ -41,37 +41,11 @@
     }
     </script>
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4C764ED4G"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-M4C764ED4G');
-    </script>
-    
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[]; // Baris ini sebelumnya hilang, menyebabkan error 'push'
-    t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2037326590352817');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2037326590352817&ev=PageView&noscript=1"
-    alt=""/></noscript>
-    
     <style>
         :root {
             --color-primary: #2E7D32; 
             --color-cta: #CC0000;
             --color-text: #333333;
-            /* WARNA-WARNA INI SUDAH DIGELAPKAN AGAR LOLOS UJI KONTRAS */
             --color-fb: #115fbf;   
             --color-ig: #d62976;   
             --color-tiktok: #000000;
@@ -79,7 +53,7 @@
             --color-toped: #027a0a; 
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* System Font = Tercepat */
             background-color: #f9f9f9;
             color: var(--color-text);
             line-height: 1.6;
@@ -96,9 +70,9 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        /* HEADER STYLES */
         img.logo {
             max-width: 120px;
+            height: auto; /* Menjaga rasio */
             margin-bottom: 5px; 
         }
         h1 {
@@ -123,7 +97,6 @@
             line-height: 1.4; 
         }
 
-        /* CTA BUTTONS */
         .cta-section {
             display: flex;
             gap: 20px;
@@ -162,7 +135,6 @@
             background-color: var(--color-cta);
         }
         
-        /* FOOTER STYLES */
         footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -172,6 +144,7 @@
         }
         .footer-logo {
             max-width: 100px; 
+            height: auto;
             margin-bottom: 5px; 
         }
         .footer-brand-name {
@@ -183,7 +156,7 @@
             margin-top: 5px; 
         }
 
-        /* TOMBOL MAPS & MEDSOS */
+        /* CSS BUTTON BARU DENGAN SVG */
         .btn-maps {
             display: inline-flex;
             align-items: center;
@@ -202,6 +175,12 @@
         .btn-maps:hover {
             background-color: #0b57d0;
             color: #fff !important;
+        }
+        /* SVG Ikon settings */
+        .icon-svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor; /* Mengikuti warna text */
         }
 
         .social-links-container {
@@ -253,7 +232,7 @@
     <div class="container">
         
         <main>
-            <img src="logo-rilldelish.webp" alt="Logo Rilldelish Primafood" class="logo">
+            <img src="logo-rilldelish.webp" alt="Logo Rilldelish Primafood" class="logo" width="120" height="120">
             
             <h1>PRIMAFOOD - PRODUSEN KERIPIK SAYUR DAN BUAH RILLDELISH</h1>
             <p class="status">Cemilan Sehat Bebas MSG dari Kota Batu</p>
@@ -299,7 +278,8 @@
                 
                 <div style="margin: 15px 0;">
                     <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Sumbergondo+No.+28,+Bumiaji,+Kota+Batu,+Jawa+Timur+65335" target="_blank" rel="noopener noreferrer" class="btn-maps" aria-label="Cek Lokasi Pabrik di Google Maps">
-                        <i class="fas fa-map-marked-alt"></i> Cek Lokasi Pabrik
+                        <svg class="icon-svg" viewBox="0 0 576 512"><path d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.93 14.86L160 448l160 64 139.95-55.98c8.45-3.38 18.03-2.55 25.66 3.17l17.53 13.15c8.62 6.47 20.99 3.45 25.55-6.23l5.44-11.55c8.83-18.75 17.17-38.82 21.87-59.21 2.86-12.42-6.6-24.35-19.29-24.35H480l-160-64-160 64-56-22.4V32c0-17.67-14.33-32-32-32H20.12z"/></svg>
+                        Cek Lokasi Pabrik
                     </a>
                 </div>
                 
@@ -309,19 +289,24 @@
 
                 <div class="social-links-container">
                     <a href="https://www.facebook.com/RilldelishBatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-fb" aria-label="Facebook Rilldelish">
-                        <i class="fab fa-facebook-f"></i> Facebook
+                        <svg class="icon-svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                        Facebook
                     </a>
                     <a href="https://www.instagram.com/rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-ig" aria-label="Instagram Rilldelish">
-                        <i class="fab fa-instagram"></i> Instagram
+                        <svg class="icon-svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        Instagram
                     </a>
                     <a href="https://www.tiktok.com/@Rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-tiktok" aria-label="TikTok Rilldelish">
-                        <i class="fab fa-tiktok"></i> TikTok
+                        <svg class="icon-svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                        TikTok
                     </a>
                     <a href="https://www.youtube.com/@Rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-yt" aria-label="Youtube Rilldelish">
-                        <i class="fab fa-youtube"></i> Youtube
+                        <svg class="icon-svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 42.15 48.284 48.472 42.591 11.486 213.371 11.486 213.371 11.486s170.78 0 213.371-11.486c23.497-6.322 42.003-24.822 48.284-48.472 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                        Youtube
                     </a>
                     <a href="https://www.tokopedia.com/rilldelish" target="_blank" rel="noopener noreferrer" class="social-btn bg-toped" aria-label="Tokopedia Rilldelish">
-                        <i class="fas fa-shopping-bag"></i> Tokopedia
+                        <svg class="icon-svg" viewBox="0 0 448 512"><path d="M312 32c0-17.7-14.3-32-32-32H168c-17.7 0-32 14.3-32 32V64H312V32zM104 64H32C14.3 64 0 78.3 0 96V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-17.7-14.3-32-32-32H344V32C344 14.3 329.7 0 312 0H168C150.3 0 136 14.3 136 32V64H104zm64 64c17.7 0 32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32zm144 32c0-17.7 14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32z"/></svg>
+                        Tokopedia
                     </a>
                 </div>
                 
@@ -333,6 +318,31 @@
             </div>
         </footer>
     </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4C764ED4G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M4C764ED4G');
+    </script>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[]; 
+    t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2037326590352817');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2037326590352817&ev=PageView&noscript=1"
+    alt=""/></noscript>
+
 </body>
 </html>
-
