@@ -6,7 +6,6 @@
     <title>Primafood - Produsen Keripik Sayur dan Buah Rilldelish</title>
     
     <meta name="description" content="Primafood Batu - Produsen dan Supplier Keripik Sayur dan Buah Rilldelish. Kami adalah pabrik keripik sehat (0% MSG) terbaik di Kota Batu.">
-
     <meta name="facebook-domain-verification" content="09yu2ye8ievc775csqiqc2z2b0l6eb" />
 
     <link rel="icon" href="favicon.png" sizes="32x32">
@@ -62,18 +61,19 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2037326590352817&ev=PageView&noscript=1"
-    /></noscript>
+    alt=""/></noscript>
     
     <style>
         :root {
             --color-primary: #2E7D32; 
             --color-cta: #CC0000;
             --color-text: #333333;
-            --color-fb: #1877F2;
-            --color-ig: #E1306C;
+            /* WARNA-WARNA INI SUDAH DIGELAPKAN AGAR LOLOS UJI KONTRAS */
+            --color-fb: #115fbf;   /* Biru FB lebih gelap */
+            --color-ig: #d62976;   /* Solid fallback untuk IG */
             --color-tiktok: #000000;
-            --color-yt: #FF0000;
-            --color-toped: #03AC0E;
+            --color-yt: #cc0000;   /* Merah Youtube lebih gelap */
+            --color-toped: #027a0a; /* Hijau Tokopedia lebih gelap */
         }
         body {
             font-family: 'Poppins', sans-serif;
@@ -96,12 +96,12 @@
         /* HEADER STYLES */
         img.logo {
             max-width: 120px;
-            margin-bottom: 5px; /* DIUBAH: Lebih rapat ke teks bawahnya */
+            margin-bottom: 5px; 
         }
         h1 {
             color: var(--color-primary);
             font-weight: 800;
-            margin-top: 0; /* Memastikan tidak ada jarak extra di atas */
+            margin-top: 0; 
             margin-bottom: 5px;
             font-size: 2.0em; 
             line-height: 1.1;
@@ -169,7 +169,7 @@
         }
         .footer-logo {
             max-width: 100px; 
-            margin-bottom: 5px; /* DIUBAH: Lebih rapat */
+            margin-bottom: 5px; 
         }
         .footer-brand-name {
             margin-top: 0;
@@ -177,27 +177,27 @@
             color: var(--color-primary);
         }
         .footer-address {
-            margin-top: 5px; /* DIUBAH: Lebih rapat */
+            margin-top: 5px; 
         }
 
-        /* TOMBOL MAPS & MEDSOS BARU */
+        /* TOMBOL MAPS & MEDSOS */
         .btn-maps {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             background-color: #ffffff;
-            border: 2px solid #4285F4;
-            color: #4285F4 !important;
+            border: 2px solid #0b57d0; /* Warna digelapkan agar lulus kontras */
+            color: #0b57d0 !important; /* Warna digelapkan agar lulus kontras */
             padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700; /* Dipertebal agar lebih terbaca */
             margin-top: 10px;
             transition: all 0.3s;
         }
         .btn-maps:hover {
-            background-color: #4285F4;
+            background-color: #0b57d0;
             color: #fff !important;
         }
 
@@ -224,7 +224,10 @@
             transform: translateY(-3px);
             color: white;
         }
+        
+        /* Penggunaan Background Color Variable */
         .bg-fb { background-color: var(--color-fb); }
+        /* Instagram Gradient tetap sama, biasanya cukup kontras */
         .bg-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
         .bg-tiktok { background-color: var(--color-tiktok); }
         .bg-yt { background-color: var(--color-yt); }
@@ -239,7 +242,7 @@
             }
             h1 { font-size: 1.8em; }
             .social-btn {
-                width: 100%; /* Di HP tombol medsos jadi full width agar mudah dipencet */
+                width: 100%; 
                 justify-content: center;
             }
         }
@@ -247,34 +250,35 @@
 </head>
 <body>
     <div class="container">
-        <img src="logo-rilldelish.webp" alt="Logo Rilldelish Primafood" class="logo">
         
-        <h1>PRIMAFOOD - PRODUSEN KERIPIK SAYUR DAN BUAH RILLDELISH</h1>
-        <p class="status">Cemilan Sehat Bebas MSG dari Kota Batu</p>
-        
-        <p class="business-desc">
-            Selamat datang di **Primafood Batu**, **Supplier Keripik Sayur** dan **Keripik Buah** terpercaya. Kami adalah **Produsen Keripik Sehat** Rilldelish yang 100% Bebas MSG. Cari **Oleh-Oleh Khas Kota Batu** yang unik? Produk kami adalah **Oleh Oleh Wajib saat ke Kota Batu**! Kami melayani **Grosir Keripik Sayur dan Buah**, Reseller, dan Retail.
-        </p>
-        
-        <hr style="width: 80px; margin: 30px auto; border-color: #ddd;">
-
-        <p style="font-weight: 600; margin-bottom: 20px;">Pilih jenis pesanan Anda:</p>
-
-        <div class="cta-section">
-            <div class="cta-block">
-                <h2>🛍️ INGIN ORDER GROSIR / HARGA PABRIK?</h2>
-                <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Untuk mitra yang ingin memesan dalam jumlah besar dengan diskon Tier)</p>
-                <a href="https://grosir.rilldelish.my.id" class="button grosir">MENU GROSIR & DISKON</a>
-            </div>
+        <main>
+            <img src="logo-rilldelish.webp" alt="Logo Rilldelish Primafood" class="logo">
             
-            <div class="cta-block">
-                <h2>🤝 INGIN JADI MITRA / CEK PRICE LIST?</h2>
-                <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Untuk calon reseller, cek Varian, atau klaim kuota diskon reseller baru)</p>
-                <a href="https://reseller.rilldelish.my.id" class="button reseller">MENU RESELLER & KEMITRAAN</a>
-            </div>
-        </div>
+            <h1>PRIMAFOOD - PRODUSEN KERIPIK SAYUR DAN BUAH RILLDELISH</h1>
+            <p class="status">Cemilan Sehat Bebas MSG dari Kota Batu</p>
+            
+            <p class="business-desc">
+                Selamat datang di **Primafood Batu**, **Supplier Keripik Sayur** dan **Keripik Buah** terpercaya. Kami adalah **Produsen Keripik Sehat** Rilldelish yang 100% Bebas MSG. Cari **Oleh-Oleh Khas Kota Batu** yang unik? Produk kami adalah **Oleh Oleh Wajib saat ke Kota Batu**! Kami melayani **Grosir Keripik Sayur dan Buah**, Reseller, dan Retail.
+            </p>
+            
+            <hr style="width: 80px; margin: 30px auto; border-color: #ddd;">
 
-       <footer>
+            <p style="font-weight: 600; margin-bottom: 20px;">Pilih jenis pesanan Anda:</p>
+
+            <div class="cta-section">
+                <div class="cta-block">
+                    <h2>🛍️ INGIN ORDER GROSIR / HARGA PABRIK?</h2>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Untuk mitra yang ingin memesan dalam jumlah besar dengan diskon Tier)</p>
+                    <a href="https://grosir.rilldelish.my.id" class="button grosir">MENU GROSIR & DISKON</a>
+                </div>
+                
+                <div class="cta-block">
+                    <h2>🤝 INGIN JADI MITRA / CEK PRICE LIST?</h2>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Untuk calon reseller, cek Varian, atau klaim kuota diskon reseller baru)</p>
+                    <a href="https://reseller.rilldelish.my.id" class="button reseller">MENU RESELLER & KEMITRAAN</a>
+                </div>
+            </div>
+        </main> <footer>
             <div class="container" style="box-shadow: none; margin: 0 auto; padding: 0; max-width: 100%;">
                 
                 <img src="logo-primafood.webp" alt="Logo Primafood Batu (Produsen)" class="footer-logo" width="100" height="100">
@@ -291,7 +295,7 @@
                 </p>
                 
                 <div style="margin: 15px 0;">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Sumbergondo+No.+28,+Bumiaji,+Kota+Batu,+Jawa+Timur+65335" target="_blank" class="btn-maps">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Sumbergondo+No.+28,+Bumiaji,+Kota+Batu,+Jawa+Timur+65335" target="_blank" rel="noopener noreferrer" class="btn-maps" aria-label="Cek Lokasi Pabrik di Google Maps">
                         <i class="fas fa-map-marked-alt"></i> Cek Lokasi Pabrik
                     </a>
                 </div>
@@ -301,19 +305,19 @@
                 <p style="margin-bottom: 10px; font-weight: 600;">Ikuti Kami / Belanja di Marketplace:</p>
 
                 <div class="social-links-container">
-                    <a href="https://www.facebook.com/RilldelishBatu" target="_blank" class="social-btn bg-fb">
+                    <a href="https://www.facebook.com/RilldelishBatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-fb" aria-label="Facebook Rilldelish">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </a>
-                    <a href="https://www.instagram.com/rilldelishbatu" target="_blank" class="social-btn bg-ig">
+                    <a href="https://www.instagram.com/rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-ig" aria-label="Instagram Rilldelish">
                         <i class="fab fa-instagram"></i> Instagram
                     </a>
-                    <a href="https://www.tiktok.com/@Rilldelishbatu" target="_blank" class="social-btn bg-tiktok">
+                    <a href="https://www.tiktok.com/@Rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-tiktok" aria-label="TikTok Rilldelish">
                         <i class="fab fa-tiktok"></i> TikTok
                     </a>
-                    <a href="https://www.youtube.com/@Rilldelishbatu" target="_blank" class="social-btn bg-yt">
+                    <a href="https://www.youtube.com/@Rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-yt" aria-label="Youtube Rilldelish">
                         <i class="fab fa-youtube"></i> Youtube
                     </a>
-                    <a href="https://www.tokopedia.com/rilldelish" target="_blank" class="social-btn bg-toped">
+                    <a href="https://www.tokopedia.com/rilldelish" target="_blank" rel="noopener noreferrer" class="social-btn bg-toped" aria-label="Tokopedia Rilldelish">
                         <i class="fas fa-shopping-bag"></i> Tokopedia
                     </a>
                 </div>
