@@ -13,6 +13,8 @@
     <link rel="icon" href="favicon-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <meta property="og:title" content="Primafood - Produsen Keripik Sayur dan Buah Rilldelish">
     <meta property="og:description" content="Cek Price List Kemitraan! Keripik sehat Vacuum Frying, 0% MSG. Supplier Grosir/Reseller Resmi.">
     <meta property="og:image" content="https://rilldelish.my.id/OG-Image.jpg">
@@ -67,6 +69,11 @@
             --color-primary: #2E7D32; 
             --color-cta: #CC0000;
             --color-text: #333333;
+            --color-fb: #1877F2;
+            --color-ig: #E1306C;
+            --color-tiktok: #000000;
+            --color-yt: #FF0000;
+            --color-toped: #03AC0E;
         }
         body {
             font-family: 'Poppins', sans-serif;
@@ -85,15 +92,18 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+        
+        /* HEADER STYLES */
         img.logo {
             max-width: 120px;
-            margin-bottom: 25px;
+            margin-bottom: 5px; /* DIUBAH: Lebih rapat ke teks bawahnya */
         }
         h1 {
             color: var(--color-primary);
             font-weight: 800;
+            margin-top: 0; /* Memastikan tidak ada jarak extra di atas */
             margin-bottom: 5px;
-            font-size: 2.0em; /* KOREKSI: Dikecilkan agar muat 1 baris */
+            font-size: 2.0em; 
             line-height: 1.1;
         }
         p.status {
@@ -101,14 +111,16 @@
             font-weight: 600;
             color: var(--color-text);
             margin-bottom: 30px;
-            line-height: 1.3; /* KOREKSI: Merapatkan baris */
+            line-height: 1.3; 
         }
         .business-desc {
             font-size: 1.1em;
             color: #555;
             margin-bottom: 30px;
-            line-height: 1.4; /* KOREKSI: Merapatkan baris */
+            line-height: 1.4; 
         }
+
+        /* CTA BUTTONS */
         .cta-section {
             display: flex;
             gap: 20px;
@@ -135,6 +147,10 @@
             display: block;
             margin-top: 15px;
             text-transform: uppercase;
+            transition: opacity 0.2s;
+        }
+        .button:hover {
+            opacity: 0.9;
         }
         .button.grosir {
             background-color: var(--color-primary);
@@ -143,6 +159,7 @@
             background-color: var(--color-cta);
         }
         
+        /* FOOTER STYLES */
         footer {
             margin-top: 40px;
             padding-top: 20px;
@@ -150,6 +167,68 @@
             font-size: 0.9em;
             color: #666;
         }
+        .footer-logo {
+            max-width: 100px; 
+            margin-bottom: 5px; /* DIUBAH: Lebih rapat */
+        }
+        .footer-brand-name {
+            margin-top: 0;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+        .footer-address {
+            margin-top: 5px; /* DIUBAH: Lebih rapat */
+        }
+
+        /* TOMBOL MAPS & MEDSOS BARU */
+        .btn-maps {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #ffffff;
+            border: 2px solid #4285F4;
+            color: #4285F4 !important;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .btn-maps:hover {
+            background-color: #4285F4;
+            color: #fff !important;
+        }
+
+        .social-links-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .social-btn:hover {
+            transform: translateY(-3px);
+            color: white;
+        }
+        .bg-fb { background-color: var(--color-fb); }
+        .bg-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+        .bg-tiktok { background-color: var(--color-tiktok); }
+        .bg-yt { background-color: var(--color-yt); }
+        .bg-toped { background-color: var(--color-toped); }
         
         @media (max-width: 600px) {
             .cta-section {
@@ -159,6 +238,10 @@
                 padding: 30px 20px;
             }
             h1 { font-size: 1.8em; }
+            .social-btn {
+                width: 100%; /* Di HP tombol medsos jadi full width agar mudah dipencet */
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -192,46 +275,56 @@
         </div>
 
        <footer>
-    <div class="container" style="text-align: center;">
-        <img src="logo-primafood.webp" alt="Logo Primafood Batu (Produsen)" class="footer-logo" style="max-width: 100px; margin-bottom: 15px;" width="100" height="100">
-        
-        <p class="footer-brand-name">Primafood Batu - Produsen Keripik Rilldelish</p>
-        
-        <p class="footer-address">
-            Alamat Pabrik/Kantor: <br>
-            Jl. Sumbergondo No. 28, Bumiaji, Kota Batu, Jawa Timur 65335
-        </p>
+            <div class="container" style="box-shadow: none; margin: 0 auto; padding: 0; max-width: 100%;">
+                
+                <img src="logo-primafood.webp" alt="Logo Primafood Batu (Produsen)" class="footer-logo" width="100" height="100">
+                
+                <p class="footer-brand-name">Primafood Batu - Produsen Keripik Rilldelish</p>
+                
+                <p class="footer-address">
+                    Alamat Pabrik/Kantor: <br>
+                    Jl. Sumbergondo No. 28, Bumiaji, Kota Batu, Jawa Timur 65335
+                </p>
 
-        <p class="footer-contact" style="margin-top: 15px; margin-bottom: 5px;">
-            <strong>Kontak WA: 0812-4966-298</strong>
-        </p>
-        <p class="footer-contact">
-            <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Sumbergondo+No.+28,+Bumiaji,+Kota+Batu,+Jawa+Timur+65335" target="_blank" class="map-link">
-                📍 Cek Lokasi Pabrik di Google Maps
-            </a>
-        </p>
-        
-        <hr style="border-color: #444; width: 50%; margin: 20px auto;">
+                <p class="footer-contact" style="margin-top: 15px; margin-bottom: 5px;">
+                    <strong>Kontak WA: 0812-4966-298</strong>
+                </p>
+                
+                <div style="margin: 15px 0;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Sumbergondo+No.+28,+Bumiaji,+Kota+Batu,+Jawa+Timur+65335" target="_blank" class="btn-maps">
+                        <i class="fas fa-map-marked-alt"></i> Cek Lokasi Pabrik
+                    </a>
+                </div>
+                
+                <hr style="border-color: #eee; width: 80%; margin: 25px auto;">
 
-        <div class="footer-social-links">
-            <a href="https://www.facebook.com/RilldelishBatu" target="_blank">📘 Facebook</a>
-            <a href="https://www.instagram.com/rilldelishbatu" target="_blank">📸 Instagram</a>
-            <a href="https://www.tiktok.com/@Rilldelishbatu" target="_blank">🎶 TikTok</a>
-            <a href="https://www.youtube.com/@Rilldelishbatu" target="_blank">▶️ Youtube</a>
-            <a href="https://www.tokopedia.com/rilldelish" target="_blank">🛒 Tokopedia</a>
-        </div>
-        
-        <p class="footer-copyright">
-            © 2025 Primafood. Semua Hak Dilindungi.
-            <br>
-            <span class="footer-note">*Gambar/visual produk hanya untuk ilustrasi. Tampilan dan kemasan produk sebenarnya dapat bervariasi.</span>
-        </p>
-    </div>
-</footer>
+                <p style="margin-bottom: 10px; font-weight: 600;">Ikuti Kami / Belanja di Marketplace:</p>
+
+                <div class="social-links-container">
+                    <a href="https://www.facebook.com/RilldelishBatu" target="_blank" class="social-btn bg-fb">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/rilldelishbatu" target="_blank" class="social-btn bg-ig">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@Rilldelishbatu" target="_blank" class="social-btn bg-tiktok">
+                        <i class="fab fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="https://www.youtube.com/@Rilldelishbatu" target="_blank" class="social-btn bg-yt">
+                        <i class="fab fa-youtube"></i> Youtube
+                    </a>
+                    <a href="https://www.tokopedia.com/rilldelish" target="_blank" class="social-btn bg-toped">
+                        <i class="fas fa-shopping-bag"></i> Tokopedia
+                    </a>
+                </div>
+                
+                <p class="footer-copyright" style="margin-top: 30px;">
+                    © 2025 Primafood. Semua Hak Dilindungi.
+                    <br>
+                    <span class="footer-note" style="font-size: 0.8em;">*Gambar/visual produk hanya untuk ilustrasi. Tampilan dan kemasan produk sebenarnya dapat bervariasi.</span>
+                </p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
-
-
-
-
