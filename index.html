@@ -177,13 +177,13 @@
             color: #fff !important;
         }
 
-        /* TOMBOL WHATSAPP BARU */
+        /* TOMBOL WHATSAPP (WARNA DIGELAPKAN AGAR LOLOS KONTRAS) */
         .btn-wa {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background-color: #128C7E; /* Warna Resmi WA Teal (Lebih kontras dari hijau muda) */
+            background-color: #075E54; /* Diubah ke WA Dark Teal agar kontras tinggi */
             color: white !important;
             padding: 12px 25px;
             border-radius: 50px;
@@ -198,7 +198,7 @@
         .btn-wa:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-            background-color: #075E54; /* Warna hover lebih gelap */
+            background-color: #044c43; /* Hover lebih gelap lagi */
         }
 
         /* SVG Ikon settings */
@@ -207,7 +207,7 @@
             height: 18px;
             fill: currentColor; 
         }
-        .icon-svg-lg { /* Ikon WA sedikit lebih besar */
+        .icon-svg-lg { 
             width: 22px;
             height: 22px;
             fill: currentColor;
@@ -256,7 +256,7 @@
                 justify-content: center;
             }
             .btn-wa {
-                width: 100%; /* Di HP tombol WA full width agar mudah dipencet */
+                width: 100%;
                 box-sizing: border-box;
             }
         }
@@ -349,8 +349,6 @@
                 
                 <p class="footer-copyright" style="margin-top: 30px;">
                     © 2025 Primafood. Semua Hak Dilindungi.
-                    <br>
-                    <span class="footer-note" style="font-size: 0.8em;">*Gambar/visual produk hanya untuk ilustrasi. Tampilan dan kemasan produk sebenarnya dapat bervariasi.</span>
                 </p>
             </div>
         </footer>
