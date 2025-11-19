@@ -53,6 +53,7 @@
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    t=b.createElement(e);t.async=!0; 
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
@@ -69,11 +70,11 @@
             --color-cta: #CC0000;
             --color-text: #333333;
             /* WARNA-WARNA INI SUDAH DIGELAPKAN AGAR LOLOS UJI KONTRAS */
-            --color-fb: #115fbf;   /* Biru FB lebih gelap */
-            --color-ig: #d62976;   /* Solid fallback untuk IG */
+            --color-fb: #115fbf;   
+            --color-ig: #d62976;   
             --color-tiktok: #000000;
-            --color-yt: #cc0000;   /* Merah Youtube lebih gelap */
-            --color-toped: #027a0a; /* Hijau Tokopedia lebih gelap */
+            --color-yt: #cc0000;   
+            --color-toped: #027a0a; 
         }
         body {
             font-family: 'Poppins', sans-serif;
@@ -187,12 +188,12 @@
             justify-content: center;
             gap: 8px;
             background-color: #ffffff;
-            border: 2px solid #0b57d0; /* Warna digelapkan agar lulus kontras */
-            color: #0b57d0 !important; /* Warna digelapkan agar lulus kontras */
+            border: 2px solid #0b57d0;
+            color: #0b57d0 !important;
             padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700; /* Dipertebal agar lebih terbaca */
+            font-weight: 700; 
             margin-top: 10px;
             transition: all 0.3s;
         }
@@ -225,9 +226,7 @@
             color: white;
         }
         
-        /* Penggunaan Background Color Variable */
         .bg-fb { background-color: var(--color-fb); }
-        /* Instagram Gradient tetap sama, biasanya cukup kontras */
         .bg-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
         .bg-tiktok { background-color: var(--color-tiktok); }
         .bg-yt { background-color: var(--color-yt); }
@@ -278,7 +277,9 @@
                     <a href="https://reseller.rilldelish.my.id" class="button reseller">MENU RESELLER & KEMITRAAN</a>
                 </div>
             </div>
-        </main> <footer>
+        </main> 
+
+       <footer>
             <div class="container" style="box-shadow: none; margin: 0 auto; padding: 0; max-width: 100%;">
                 
                 <img src="logo-primafood.webp" alt="Logo Primafood Batu (Produsen)" class="footer-logo" width="100" height="100">
