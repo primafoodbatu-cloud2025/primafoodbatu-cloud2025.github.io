@@ -62,11 +62,7 @@
     <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
-        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2'); }
-        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2'); }
-        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2'); }
-        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2) format('woff2'); }
-
+        /* 1. VARIABEL WARNA */
         :root {
             --color-primary: #2E7D32; 
             --color-cta: #CC0000;
@@ -77,16 +73,24 @@
             --color-yt: #cc0000;    
             --color-toped: #027a0a; 
         }
+
+        /* 2. RESET & BODY */
         body {
             font-family: 'Poppins', Verdana, sans-serif;
             background-color: #f9f9f9;
             color: var(--color-text);
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0; /* Padding body 0 agar footer bisa full width */
             text-align: center;
             text-rendering: optimizeLegibility;
         }
+
+        /* 3. CONTAINER UTAMA (Konten Atas) */
+        .main-wrapper {
+            padding: 20px;
+        }
+
         .container {
             max-width: 700px;
             margin: 40px auto;
@@ -96,6 +100,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
+        /* 4. ELEMEN HALAMAN */
         img.logo { 
             width: 120px; 
             height: auto; 
@@ -122,6 +127,7 @@
             contain: content; 
         }
 
+        /* 5. TOMBOL CTA (Grosir/Reseller) */
         .cta-section { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
         .cta-block {
             flex: 1; padding: 20px 10px; border: 1px solid #ddd; border-radius: 8px; transition: transform 0.3s;
@@ -135,68 +141,44 @@
         .button:hover { opacity: 0.9; }
         .button.grosir { background-color: var(--color-primary); }
         .button.reseller { background-color: var(--color-cta); }
-        
-        footer {
-            margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #666;
-        }
-        .footer-logo { width: 100px; height: auto; aspect-ratio: 1/1; margin-bottom: 5px; }
-        .footer-brand-name { margin-top: 0; font-weight: bold; color: var(--color-primary); }
-        .footer-address { margin-top: 5px; }
 
-        .btn-maps, .btn-wa {
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s;
-        }
-        .btn-maps {
-            background-color: #ffffff; border: 2px solid #0b57d0; color: #0b57d0 !important;
-            padding: 10px 20px; margin-top: 10px;
-        }
-        .btn-maps:hover { background-color: #0b57d0; color: #fff !important; }
-        
-        .btn-wa {
-            background-color: #075E54; color: white !important; padding: 12px 25px;
-            font-size: 1.1em; margin-top: 10px; margin-bottom: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn-wa:hover { transform: translateY(-3px); background-color: #044c43; }
-
-        .icon-svg { width: 18px; height: 18px; fill: currentColor; }
-        .icon-svg-lg { width: 22px; height: 22px; fill: currentColor; }
-
-        .social-links-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; }
-        .social-btn {
-            display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px;
-            border-radius: 8px; text-decoration: none; color: white; font-size: 0.9em;
-            font-weight: 600; transition: transform 0.2s;
-        }
-        .social-btn:hover { transform: translateY(-3px); color: white; }
-        
-        .bg-fb { background-color: var(--color-fb); }
-        .bg-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-        .bg-tiktok { background-color: var(--color-tiktok); }
-        .bg-yt { background-color: var(--color-yt); }
-        .bg-toped { background-color: var(--color-toped); }
-        
-        @media (max-width: 600px) {
-            .cta-section { flex-direction: column; }
-            .container { padding: 30px 20px; }
-            h1 { font-size: 1.8em; }
-            .social-btn, .btn-wa { width: 100%; justify-content: center; box-sizing: border-box; }
-        }
-        /* CSS TAMBAHAN UNTUK FOOTER BARU (3 KOLOM) */
+        /* 6. FOOTER BARU (3 KOLOM - Full Width) */
         .site-footer {
-            background-color: #1a1a1a; color: #eee; padding: 40px 0 20px 0; font-size: 0.9em; text-align: left;
+            background-color: #1a1a1a; 
+            color: #eee; 
+            padding: 50px 20px 20px 20px; 
+            font-size: 0.9em; 
+            text-align: left;
+            margin-top: 50px;
+            width: 100%;
         }
+        
+        /* Container Footer agar tidak terlalu lebar */
+        .site-footer .container {
+            background-color: transparent;
+            box-shadow: none;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1100px; /* Lebar footer disamakan dgn standar web */
+        }
+
         .footer-row {
             display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; align-items: flex-start;
         }
         .footer-col { flex: 1; min-width: 250px; }
+        
         .footer-heading {
-            font-size: 1.2em; color: #ff8c00; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 5px; display: inline-block;
+            font-size: 1.2em; color: #ff8c00; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 5px; display: inline-block; font-weight: 700;
         }
+        
+        .footer-address { color: #ccc; line-height: 1.6; }
+        .footer-address strong { color: #fff; font-size: 1.1em; }
+        
         .map-container-small {
             width: 100%; height: 150px; border-radius: 6px; overflow: hidden; border: 2px solid #444;
         }
-        .map-link-text { display: block; font-size: 0.8em; color: #aaa; margin-top: 5px; text-decoration: none; }
+        .map-link-text { display: block; font-size: 0.8em; color: #81d4fa; margin-top: 8px; text-decoration: none; }
+        .map-link-text:hover { text-decoration: underline; color: #fff; }
         
         .action-buttons { display: flex; gap: 10px; margin-bottom: 15px; }
         .btn-flat {
@@ -213,11 +195,20 @@
             border: 1px solid #444; transition: all 0.2s;
         }
         .social-box:hover { color: white !important; border-color: transparent; background-color: #444; }
+        .social-box.fb:hover { background-color: #1877F2; }
+        .social-box.ig:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .social-box.tt:hover { background-color: #000000; border-color: #fff; }
+        .social-box.yt:hover { background-color: #FF0000; }
         
         .footer-copyright { text-align: center; margin-top: 30px; padding-top: 15px; border-top: 1px solid #333; color: #777; font-size: 0.8em; }
 
+        /* 7. RESPONSIVE MOBILE */
         @media (max-width: 768px) {
+            .cta-section { flex-direction: column; }
+            .container { padding: 30px 20px; }
+            h1 { font-size: 1.8em; }
             .footer-row { flex-direction: column; gap: 40px; }
+            .site-footer { padding: 30px 15px; }
         }
     </style>
     
@@ -275,19 +266,25 @@
             </div>
             <hr style="width: 80px; margin: 30px auto; border-color: #ddd;">
 
-            <p style="font-weight: 600; margin-bottom: 20px;">Pilih jenis pesanan Anda:</p>
+            <div style="margin-bottom: 30px;">
+                <p style="font-weight: 600; margin-bottom: 15px;">Ingin lihat foto produk lengkap?</p>
+                <a href="https://grosir.rilldelish.my.id/katalog.html" style="display: inline-block; background-color: #e65100; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; box-shadow: 0 4px 10px rgba(230, 81, 0, 0.2); transition: transform 0.2s;">
+                    🖼️ LIHAT GALERI KATALOG PRODUK
+                </a>
+            </div>
+            <p style="font-weight: 600; margin-bottom: 20px;">Atau pilih jenis pesanan Anda:</p>
 
             <div class="cta-section">
                 <div class="cta-block">
-                    <h2>🛍️ INGIN ORDER GROSIR / HARGA PABRIK?</h2>
-                    <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Untuk mitra yang ingin memesan dalam jumlah besar dengan diskon Tier)</p>
+                    <h2 style="font-size: 1.2em; margin-bottom: 10px;">🛍️ ORDER GROSIR / PABRIK</h2>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Pesan jumlah besar dengan diskon Tier)</p>
                     <a href="https://grosir.rilldelish.my.id" class="button grosir">MENU GROSIR & DISKON</a>
                 </div>
         
                 <div class="cta-block">
-                    <h2>🤝 INGIN JADI MITRA / CEK PRICE LIST?</h2>
-                    <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Untuk calon reseller, cek Varian, atau klaim kuota diskon reseller baru)</p>
-                    <a href="https://reseller.rilldelish.my.id" class="button reseller">MENU RESELLER & KEMITRAAN</a>
+                    <h2 style="font-size: 1.2em; margin-bottom: 10px;">🤝 DAFTAR RESELLER</h2>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #555;">(Gabung mitra & cek price list lengkap)</p>
+                    <a href="https://reseller.rilldelish.my.id" class="button reseller">MENU RESELLER</a>
                 </div>
             </div>
         </main>
@@ -343,6 +340,7 @@
     </div>
 </body>
 </html>
+
 
 
 
