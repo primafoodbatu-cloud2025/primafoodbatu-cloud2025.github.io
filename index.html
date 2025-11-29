@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://connect.facebook.net https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; img-src 'self' data: https:; connect-src 'self' https:; upgrade-insecure-requests;">
     
     <title>Primafood - Produsen Keripik Sayur dan Buah Rilldelish</title>
-    <meta name="description" content="Primafood Batu - Produsen dan Supplier Keripik Sayur dan Buah Rilldelish. Kami adalah pabrik keripik sehat (0% MSG) terbaik di Kota Batu.Jual Ecer maupun Grosir/Reseller Resmi.">
+    <meta name="description" content="Primafood Batu - Produsen dan Supplier Keripik Sayur dan Buah Rilldelish. Kami adalah pabrik keripik sehat (0% MSG) terbaik di Kota Batu. Jual Ecer maupun Grosir/Reseller Resmi.">
     <meta name="facebook-domain-verification" content="09yu2ye8ievc775csqiqc2z2b0l6eb" />
+    <meta name="robots" content="index, follow">
 
     <link rel="icon" href="favicon.png" sizes="32x32">
     <link rel="icon" href="favicon-192x192.png" sizes="192x192">
@@ -23,68 +25,56 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FoodProducer",
+      "@type": "FoodEstablishment",
       "name": "Primafood - Produsen Keripik Sayur dan Buah Rilldelish",
       "image": "https://rilldelish.my.id/OG-Image.jpg",
       "description": "Produsen dan Supplier Keripik Sayur dan Buah Sehat (0% MSG) Rilldelish - Primafood Batu. Keripik Sehat Metode Vacuum Frying, 0% MSG. Jual Ecer maupun Grosir/Reseller",
       "url": "https://rilldelish.my.id",
       "telephone": "+6285735785319",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Jl. Sumbergondo No. 28, Bumiaji",
+        "streetAddress": "Jl. Raya Sumbergondo No.28, Sumbergondo, Kec. Bumiaji",
         "addressLocality": "Kota Batu",
         "addressRegion": "Jawa Timur",
         "postalCode": "65335",
         "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.8366, 
+        "longitude": 112.5250 
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
       }
     }
     </script>
     
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
-        /* Definisi Font */
-        @font-face {
-          font-family: 'Poppins';
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
-        }
-        @font-face {
-          font-family: 'Poppins';
-          font-style: normal;
-          font-weight: 600;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
-        }
-        @font-face {
-          font-family: 'Poppins';
-          font-style: normal;
-          font-weight: 700;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');
-        }
-        @font-face {
-          font-family: 'Poppins';
-          font-style: normal;
-          font-weight: 800;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2) format('woff2');
-        }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2'); }
+        @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 800; font-display: swap; src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4Z1xlFQ.woff2) format('woff2'); }
 
         :root {
             --color-primary: #2E7D32; 
             --color-cta: #CC0000;
             --color-text: #333333;
-            --color-fb: #115fbf;   
-            --color-ig: #d62976;   
+            --color-fb: #115fbf;    
+            --color-ig: #d62976;    
             --color-tiktok: #000000;
-            --color-yt: #cc0000;   
+            --color-yt: #cc0000;    
             --color-toped: #027a0a; 
         }
         body {
@@ -106,7 +96,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        /* Logo */
         img.logo { 
             width: 120px; 
             height: auto; 
@@ -115,7 +104,6 @@
             display: inline-block;
         }
 
-        /* H1 */
         h1 {
             color: var(--color-primary); 
             font-weight: 800; 
@@ -194,31 +182,73 @@
             h1 { font-size: 1.8em; }
             .social-btn, .btn-wa { width: 100%; justify-content: center; box-sizing: border-box; }
         }
+        /* CSS TAMBAHAN UNTUK FOOTER BARU (3 KOLOM) */
+        .site-footer {
+            background-color: #1a1a1a; color: #eee; padding: 40px 0 20px 0; font-size: 0.9em; text-align: left;
+        }
+        .footer-row {
+            display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; align-items: flex-start;
+        }
+        .footer-col { flex: 1; min-width: 250px; }
+        .footer-heading {
+            font-size: 1.2em; color: #ff8c00; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 5px; display: inline-block;
+        }
+        .map-container-small {
+            width: 100%; height: 150px; border-radius: 6px; overflow: hidden; border: 2px solid #444;
+        }
+        .map-link-text { display: block; font-size: 0.8em; color: #aaa; margin-top: 5px; text-decoration: none; }
+        
+        .action-buttons { display: flex; gap: 10px; margin-bottom: 15px; }
+        .btn-flat {
+            flex: 1; text-align: center; padding: 10px; border-radius: 4px; text-decoration: none; 
+            color: white !important; font-weight: 600; font-size: 0.9em; transition: opacity 0.2s;
+        }
+        .wa-btn { background-color: #075e54; }
+        .tokped-btn { background-color: #037539; }
+        
+        .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .social-box {
+            display: block; text-align: center; padding: 8px; background-color: #333; 
+            color: #ccc !important; text-decoration: none; border-radius: 4px; font-size: 0.85em; 
+            border: 1px solid #444; transition: all 0.2s;
+        }
+        .social-box:hover { color: white !important; border-color: transparent; background-color: #444; }
+        
+        .footer-copyright { text-align: center; margin-top: 30px; padding-top: 15px; border-top: 1px solid #333; color: #777; font-size: 0.8em; }
+
+        @media (max-width: 768px) {
+            .footer-row { flex-direction: column; gap: 40px; }
+        }
     </style>
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4C764ED4G"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-M4C764ED4G');
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            // Google Tag Manager
+            var gtmScript = document.createElement('script');
+            gtmScript.async = true;
+            gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-M4C764ED4G';
+            document.head.appendChild(gtmScript);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-M4C764ED4G');
+
+            // Facebook Pixel
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2037326590352817');
+            fbq('track', 'PageView');
+        }, 4000); 
+    });
     </script>
-    
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2037326590352817');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2037326590352817&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2037326590352817&ev=PageView&noscript=1" /></noscript>
 </head>
 <body>
     <div class="container">
@@ -262,69 +292,58 @@
             </div>
         </main>
 
-        <footer>
-            <div class="container" style="box-shadow: none; margin: 0 auto; padding: 0; max-width: 100%;">
+        <footer class="site-footer">
+        <div class="container">
+            <div class="footer-row">
                 
-                <img src="logo-primafood.webp" alt="Logo Primafood Batu (Produsen)" class="footer-logo" width="100" height="100">
-                
-                <p class="footer-brand-name">Primafood - Produsen Keripik Sayur Dan Buah Rilldelish</p>
-                
-                <p class="footer-address">
-                    Alamat Pabrik/Kantor: <br>
-                    Jl. Sumbergondo No. 28, Bumiaji, Kota Batu, Jawa Timur 65335
-                </p>
-
-                <div style="margin: 20px 0;">
-                    <a href="https://wa.me/6285735785319?text=Halo%20Primafood,%20saya%20tertarik%20dengan%20produk%20keripik%20Rilldelish..." target="_blank" class="btn-wa">
-                        <svg class="icon-svg-lg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.9 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                        Chat WA: 0812-4966-298
-                    </a>
+                <div class="footer-col info-col">
+                    <h3 class="footer-heading">📍 Lokasi Pabrik</h3>
+                    <div class="footer-address" style="line-height: 1.6;">
+                        <strong>Primafood - Produsen Keripik Sayur dan Buah Rilldelish</strong><br>
+                        Jl. Raya Sumbergondo No.28, Sumbergondo,<br>
+                        Kec. Bumiaji, Kota Batu, Jawa Timur 65335.<br><br>
+                        <span style="color: #aaa; font-size: 0.9em;">Buka: Senin - Sabtu (08.00 - 20.00)</span>
+                    </div>
                 </div>
-                
-                <div style="margin: 15px 0;">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Sumbergondo+No.+28,+Bumiaji,+Kota+Batu,+Jawa+Timur+65335" target="_blank" rel="noopener noreferrer" class="btn-maps" aria-label="Cek Lokasi Pabrik di Google Maps">
-                        <svg class="icon-svg" viewBox="0 0 576 512"><path d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.93 14.86L160 448l160 64 139.95-55.98c8.45-3.38 18.03-2.55 25.66 3.17l17.53 13.15c8.62 6.47 20.99 3.45 25.55-6.23l5.44-11.55c8.83-18.75 17.17-38.82 21.87-59.21 2.86-12.42-6.6-24.35-19.29-24.35H480l-160-64-160 64-56-22.4V32c0-17.67-14.33-32-32-32H20.12z"/></svg>
-                        Cek Lokasi Pabrik
-                    </a>
+
+                <div id="lokasi" class="footer-col map-col">
+                    <h3 class="footer-heading">🗺️ Peta Google</h3>
+                    <div class="map-container-small">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d988.1519777369489!2d112.5300647!3d-7.8312557!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e787fc3b7339d23%3A0xa193454399aa9ab2!2sPrimafood%20-%20Produsen%20Keripik%20Sayur%20dan%20Buah%20Rilldelish!5e0!3m2!1sid!2sid!4v1764408189382!5m2!1sid!2sid" 
+                            title="Peta Lokasi Primafood Rilldelish" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/wGtEuiTE8gYtNfqJM" target="_blank" class="map-link-text">Buka di Google Maps App ↗</a>
                 </div>
-                
-                <hr style="border-color: #eee; width: 80%; margin: 25px auto;">
 
-                <p style="margin-bottom: 10px; font-weight: 600;">Ikuti Kami / Belanja di Marketplace:</p>
-
-                <div class="social-links-container">
-                    <a href="https://www.facebook.com/RilldelishBatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-fb" aria-label="Facebook Rilldelish">
-                        <svg class="icon-svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
-                        Facebook
-                    </a>
+                <div class="footer-col connect-col">
+                    <h3 class="footer-heading">📞 Hubungi Kami</h3>
                     
-                    <a href="https://www.instagram.com/rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-ig" aria-label="Instagram Rilldelish">
-                        <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                        Instagram
-                    </a>
-                    
-                    <a href="https://www.tiktok.com/@Rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-tiktok" aria-label="TikTok Rilldelish">
-                        <svg class="icon-svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
-                        TikTok
-                    </a>
-                    <a href="https://www.youtube.com/@Rilldelishbatu" target="_blank" rel="noopener noreferrer" class="social-btn bg-yt" aria-label="Youtube Rilldelish">
-                        <svg class="icon-svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 42.15 48.284 48.472 42.591 11.486 213.371 11.486 213.371 11.486s170.78 0 213.371-11.486c23.497-6.322 42.003-24.822 48.284-48.472 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
-                        Youtube
-                    </a>
-                    <a href="https://www.tokopedia.com/rilldelish" target="_blank" rel="noopener noreferrer" class="social-btn bg-toped" aria-label="Tokopedia Rilldelish">
-                        <svg class="icon-svg" viewBox="0 0 448 512"><path d="M312 32c0-17.7-14.3-32-32-32H168c-17.7 0-32 14.3-32 32V64H312V32zM104 64H32C14.3 64 0 78.3 0 96V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-17.7-14.3-32-32-32H344V32C344 14.3 329.7 0 312 0H168C150.3 0 136 14.3 136 32V64H104zm64 64c17.7 0 32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32zm144 32c0-17.7 14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32s-32-14.3-32-32z"/></svg>
-                        Tokopedia
-                    </a>
+                    <div class="action-buttons">
+                        <a href="https://wa.me/6285735785319?text=Halo%20Primafood%2C%20saya%20tertarik%20dengan%20produk%20Rilldelish." class="btn-flat wa-btn" target="_blank">Chat WhatsApp</a>
+                        <a href="https://www.tokopedia.com/primafoodbatu" class="btn-flat tokped-btn" target="_blank">Tokopedia</a>
+                    </div>
+
+                    <div class="social-grid">
+                        <a href="https://www.facebook.com/PrimaFoodBatu/" target="_blank" class="social-box fb">Facebook</a>
+                        <a href="https://www.instagram.com/Rilldelishbatu/" target="_blank" class="social-box ig">Instagram</a>
+                        <a href="https://www.tiktok.com/@Rilldelishbatu/" target="_blank" class="social-box tt">TikTok</a>
+                        <a href="https://www.youtube.com/@Rilldelishbatu/" target="_blank" class="social-box yt">YouTube</a>
+                    </div>
                 </div>
-                
-                <p class="footer-copyright" style="margin-top: 30px;">
-                    © 2025 Primafood. Semua Hak Dilindungi.
-                </p>
             </div>
-        </footer>
+            
+            <div class="footer-copyright">
+                <p>© 2025 Primafood Rilldelish. Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
     </div>
 </body>
 </html>
+
 
 
 
